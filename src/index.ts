@@ -13,7 +13,7 @@ import { Version } from "./commands/base/controllers/Version";
 import { CommandHandler } from "./commands/CommandHandler";
 import { CommandTree } from "./commands/CommandTree";
 import { Logger } from "./lib/log/Log";
-import { SampleService } from "./services/base/SampleService";
+import { SampleService } from "./services/sample/SampleService";
 import { ServiceManager } from "./services/ServiceManager";
 
 export default class Harvey {

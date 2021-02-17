@@ -1,0 +1,6 @@
+{
+    "name": "base",
+    "description": "The base functionality of the Harvey Discord bot.",
+    "author": "Joel DeSante",
+    "root": "base"
+}

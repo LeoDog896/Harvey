@@ -1,4 +1,3 @@
-import { NotImplementedError } from "common-errors";
 import { Message, MessageEmbed } from "discord.js";
 import { Controller } from "../../Controller";
 
