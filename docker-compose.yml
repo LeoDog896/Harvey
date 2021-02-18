@@ -3,10 +3,13 @@ services:
   harvey:
     container_name: harvey
     image: harvey
+    ports:
+      - 9876:39028
     build: .
     volumes:
       - ./src:/source/src
       - ./config:/source/config
+      - ./templates:/source/templates
   db:
     container_name: mongo_database
     image: mongo

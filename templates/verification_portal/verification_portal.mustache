@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvey | Discord Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+
+        @keyframes thumbsup {
+            0% {
+                transform: rotateZ(-45deg) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateZ(0deg) scale(3);
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: Ubuntu, Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            padding: 0px;
+            margin: 0px;
+            height: 100vh;
+        }
+
+        .head {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+        }
+
+        .head h1 {
+            margin: 0px;
+        }
+
+        #thumbsup_spacer {
+            width: 50px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inner_tu {
+            animation: thumbsup 0.5s forwards;
+            animation-timing-function: cubic-bezier(.12,1.1,.92,1.21);
+            animation-delay: 500ms;
+            transform: scale(0);
+        }
+
+        #subtext {
+            color: #222222;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            @keyframes thumbsup {
+                0% {
+                    transform: rotateZ(-45deg) scale(0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: rotateZ(0deg) scale(6);
+                    opacity: 1;
+                }
+            }
+
+            .head {
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .head h1 {
+                text-align: center;
+            }
+
+            #thumbsup_spacer {
+                margin-right: 0px;
+                margin-bottom: 25px;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+            }
+
+            #break {
+                display: block;
+            }
+
+            #subtext {
+                text-align: center;
+            }
+
+            #note {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <span id="thumbsup_spacer">
+            <span id="inner_tu">&#128077;</span>
+        </span>
+        <h1>Thanks for verifying <span id="break">{{ username }}</span></h1>
+    </div>
+    <p id="subtext">You may now return back to the discord server.</p>
+    <div id="note">
+        <p><span style="font-weight: bold;">Note:</span> Don't forget to visit the course selection channel to join class specific chat rooms!</p>
+    </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ export class SampleService extends Service {
 
     private isRunning: boolean = false;
     private client: Client | undefined;
-
+//VERIFIED_ROLE_ID
     public start(client: Client): void {
         this.isRunning = true;
         this.client = client;
