@@ -1,4 +1,14 @@
-const Eris = require("eris");
+const { Client, Intents } = require("discord.js");
+const { token } = require("settings.json");
+const client = new Client({ intents: [Intents.FLAGS.GUILDS]});
+
+client.once('ready', function() {
+  console.log("Harvey has logged in.");
+});
+
+client.login(token);
+
+/*const Eris = require("eris");
 const Settings = require("./settings.json");
 
 var bot = new Eris(Settings.token);
@@ -93,4 +103,4 @@ function getRefMessage(msg) {
   return refrencedMessage;
 }
 
-bot.connect();
+bot.connect();*/
