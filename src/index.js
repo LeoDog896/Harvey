@@ -1,12 +1,20 @@
-const { Client, Intents } = require("discord.js");
-const { token } = require("settings.json");
-const client = new Client({ intents: [Intents.FLAGS.GUILDS]});
+const { Client, Intents } = require('discord.js');
+const Settings = require('../settings');
+const CourseSelector = require('./CourseSelector');
+
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS]});
+
+let a = new CourseSelector(client, 'courses.json');
 
 client.once('ready', function() {
-  console.log("Harvey has logged in.");
+  console.log('Harvey has logged in.');
 });
 
-client.login(token);
+client.login(Settings.token);
+
+
+
+
 
 /*const Eris = require("eris");
 const Settings = require("./settings.json");
